@@ -1,0 +1,9 @@
+1- a system must be devided to tasks :
+       -add comment to each task steps.
+       -create a flowchart or dynamic uml
+       -putiting task,task desription , steps files in a sperated file
+
+##############################################################################
+
+task : Storing Data In mongoDB
+Desc : this task will allow you to get data from the html input using angularJS

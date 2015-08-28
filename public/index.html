@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--Angular : 1- Specify  the module that you want to use--->
+<html lang="en" ng-app="MyApp">
+    <meta charset="UTF-8">
+    <title>Contact list app</title>
+    <!--css-->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" >
+
+</head>
+
+    <!--Angular : 2- Specify the Scope of the controller
+       that will be created later on in the module.js file.
+       (!!! step 3 in js/angular-moduels/module.js !!! )--->
+    <div class="container" ng-controller="AppCtrl">
+
+
+        <table class="table table-bordered">
+              <thead>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Number</th>
+                  <th>Action</th>
+              </thead>
+
+            <tbody>
+
+             <tr>
+                 <!-- Storing Data In mongoDB : 1-get data from user and store it in model Variable -->
+                  <td><input class="form-control" ng-model="contact.name" /></td>
+                   <td><input class="form-control" ng-model="contact.email" /></td>
+                   <td><input class="form-control" ng-model="contact.number" /></td>
+                 <!-- Storing Data In mongoDB : 2-Specify the Controller method (addContact())that will be called on Click-->
+                   <td><button class="btn btn-primary" ng-click="addContact()" >Add Contact</button></td>
+             </tr>
+            <!-- Angular :7 - loop through the model array(contactlist) and store
+                each Elment in (contact) varaible-->
+               <tr ng-repeat="contact in contactlist">
+                   <td>{{contact.name}}</td>
+                   <td>{{contact.email}}</td>
+                   <td>{{contact.number}}</td>
+               </tr>
+            </tbody>
+
+        </table>
+
+
+    </div><!--.container-->
+
+
+    <!--####################################scripts#######################-->
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!--Angular : 3- include Angular and the module files--->
+    <script src="js/angular.min.js"></script>
+   <script src="js/angular-modules/module.js" ></script>
+    <!--#################################################################-->
+
+</body>
+</html>
