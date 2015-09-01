@@ -1,0 +1,42 @@
+
+rule 1 : Documentation
+  add comment to each task step. that has this format :
+  CommentName#stepnumber : coment description .
+  CommentName must be uppercase and without a spaces.
+  description can contain sapce or any thing no rule.
+   ex:
+   InsertingDocumentInMongoDB#2 : get data from user and store it in model Variables.
+
+
+rule 2 : Documentation ref
+store all this infos in externam file :
+task      : TaskName
+ShortDesc : a short desciption about the task can't be longer then 10 words
+Long Desc : you must specify what the task do in details
+step 1 file : Specify the file that has the first ste pin the task
+
+rule 3 :
+in the HTML part put <!-------->at end of the descriptive part
+
+rule 4 :
+create a use case Diagram and treate each tasks as a scenerios of that usecase
+then draw that Dynamic diagram for each use case .
+
+
+
+
+##############################################################################
+
+-----------------list of tasks-----------------------------
+task : InsertingDocumentInMongoDB
+
+Short Desc : insert user inputs  in databse
+
+Long Desc : this task will allow you to get data from the html input using 'angularJS' then handle
+        it with the 'express node.js framework' wich  will get it then insert it in "MongoDB" Databse.
+        then  express   will return the inserted document and send to angular JS wich will
+        display it to the user.
+
+step 1 file  : /public/index.html
+
+

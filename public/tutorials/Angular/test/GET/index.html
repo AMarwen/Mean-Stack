@@ -1,0 +1,27 @@
+<!--Angular : 1- Specify  the module that you want to use--->
+<html lang="en" ng-app="MyApp">
+
+
+<!--Angular : 2- Specify the Scope of the controller
+      that will be created later on at step 4
+      -->
+<div ng-controller="scope1">
+    <input type="text" ng-model="user" value="ali"/>
+
+</div>
+
+
+
+<script src="angular.min.js" ></script>
+
+<script>
+    //Angular : 3-create a module and store it in varaible
+    //!module name is the same as the one set at stemongod.exe --dbpath "D:\DocumentsDB"p 1ng-app="MyApp"
+    var MyApp = angular.module('MyApp',[]);
+
+    /*Angular : 4-create a Controller inside your module
+     then use the $scope object to access to the "controller ng-model and template var"*/
+    MyApp.controller("scope1",function($scope) {
+       $scope.user = "omar";
+    });
+</script>
